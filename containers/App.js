@@ -11,6 +11,7 @@ class App extends Component {
     const { dispatch, visibleCodes, visibilityFilter } = this.props;
     return (
       <div className="wrapper">
+        <h1>Code Holic</h1>
         <AddCode
           onAddSubmit={data => dispatch(addCode(data))} />
         <CodeList

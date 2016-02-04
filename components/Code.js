@@ -14,9 +14,15 @@ export default class Code extends Component {
             {this.props.code}
           </code>
         </pre>
-        <p className="user-name">
-          by {this.props.name}
-        </p>
+        <div>
+          <button className="btn" onClick={this.props.minus}>-</button>
+          <button className="btn" onClick={this.props.plus}>+</button>
+          <div className="user-name">
+            <span>
+              by {this.props.name}
+            </span>
+          </div>
+        </div>
       </li>
     );
   }

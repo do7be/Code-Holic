@@ -2,20 +2,41 @@
  * Base
  */
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
+body {
+  color: #000;
+  background-color: #a8e1ff;
+  margin: 0 30px;
+  font-size: 1.2rem;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+a:link, a:visited, a:hover, a:active {
+  color: #d03c56;
+  text-decoration: none;
+}
 ul {
+  padding: 0;
   list-style: none;
 }
 li.code-preview{
   border: 1px solid #000;
   padding: 0 5px;
 }
-body {
-  background-color: #a8e1ff;
-  margin: 0 30px;
+input[type="text"], textarea {
+  font-size: 1.0rem;
 }
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.hidden {
+  display: none;
+}
+
 /*
  * Wrapper
  */
@@ -24,6 +45,7 @@ body {
   background-color: #FFF;
   margin: 0 auto;
   padding: 5px 20px;
+  width: 600px;
 }
 
 /*
@@ -106,10 +128,12 @@ body {
   border: 0;
 }
 .user-name {
-  text-align: right;
+  display: inline-block;
+  float: right;
   margin: 0 5px 5px;
 }
 .code-area {
   padding: 10px 5px;
   background-color: #EEE;
+  font-size: 0.8rem;
 }
