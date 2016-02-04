@@ -6,8 +6,8 @@ export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
-  SHOW_DELETED: 'SHOW_DELETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
+  SHOW_GOOD: 'SHOW_GOOD',
+  SHOW_BAD: 'SHOW_BAD'
 };
 
 let nextCodeId = 0;

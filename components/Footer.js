@@ -19,13 +19,13 @@ export default class Footer extends Component {
   renderFilters() {
     return (
       <p>
-        Show:
+        Filter:
         {' '}
         {this.renderFilter('SHOW_ALL', 'All')}
         {', '}
-        {this.renderFilter('SHOW_DELETED', 'Deleted')}
+        {this.renderFilter('SHOW_GOOD', 'Good')}
         {', '}
-        {this.renderFilter('SHOW_ACTIVE', 'Active')}
+        {this.renderFilter('SHOW_BAD', 'Bad')}
         .
       </p>
     )
@@ -58,7 +58,7 @@ Footer.propTypes = {
   redoDisabled: PropTypes.bool.isRequired,
   filter: PropTypes.oneOf([
     'SHOW_ALL',
-    'SHOW_DELETED',
-    'SHOW_ACTIVE'
+    'SHOW_GOOD',
+    'SHOW_BAD'
   ]).isRequired
 }

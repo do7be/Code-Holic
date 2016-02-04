@@ -42,8 +42,8 @@ App.propTypes = {
   }).isRequired).isRequired,
   visibilityFilter: PropTypes.oneOf([
     'SHOW_ALL',
-    'SHOW_DELETED',
-    'SHOW_ACTIVE'
+    'SHOW_GOOD',
+    'SHOW_BAD'
   ]).isRequired,
   undoDisabled: PropTypes.bool.isRequired,
   redoDisabled: PropTypes.bool.isRequired
@@ -54,10 +54,10 @@ function selectCodes(codes, filter) {
     default:
     case VisibilityFilters.SHOW_ALL:
       return codes;
-    case VisibilityFilters.SHOW_DELETED:
-      return codes.filter(code => code.deleted);
-    case VisibilityFilters.SHOW_ACTIVE:
-      return codes.filter(code => !code.deleted);
+    case VisibilityFilters.SHOW_GOOD:
+      return codes.filter(code => code.like >= code.dislike);
+    case VisibilityFilters.SHOW_BAD:
+      return codes.filter(code => code.like < code.dislike);
   }
 }
 
