@@ -28,6 +28,11 @@ module.exports = {
       test: /\.css$/,
       loader: "style!css",
       include: __dirname
+    },
+    {
+      test: /\.(jpg|jpeg|gif|png|ico)$/,
+      exclude: /node_modules/,
+      loader:'file-loader?name=[path][name].[ext]'
     }]
   }
 }
