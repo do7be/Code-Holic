@@ -1,3 +1,7 @@
+/*
+ * Base
+ */
+
 ul {
   list-style: none;
 }
@@ -5,6 +9,10 @@ li.code-preview{
   border: 1px solid #000;
   padding: 0 5px;
 }
+
+/*
+ * Post Form
+ */
 
 .post-code {
   width: 500px;
@@ -14,6 +22,10 @@ li.code-preview{
 .post-user-name {
   display: block;
 }
+
+/*
+ * Code List
+ */
 
 .code {
   display: inline;
@@ -28,4 +40,9 @@ li.code-preview{
 }
 .user-name {
   text-align: right;
+  margin: 0 5px 5px;
+}
+.code-area {
+  padding: 10px 5px;
+  background-color: #DDD;
 }

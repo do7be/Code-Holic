@@ -9,13 +9,13 @@ export default class Code extends Component {
           textDecoration: this.props.deleted ? 'line-through' : 'none',
           cursor: this.props.deleted ? 'default' : 'pointer'
         }}>
-        <pre>
+        <pre className="code-area">
           <code className="code">
             {this.props.code}
           </code>
         </pre>
         <p className="user-name">
-          {this.props.name}
+          by {this.props.name}
         </p>
       </li>
     );

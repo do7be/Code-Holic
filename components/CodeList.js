@@ -4,13 +4,16 @@ import Code from './Code'
 export default class CodeList extends Component {
   render() {
     return (
-      <ul>
-        {this.props.codes.map(code =>
-          <Code {...code}
-                key={code.id}
-                onClick={() => this.props.onCodeClick(code.id)} />
-        )}
-      </ul>
+      <section className="code-list">
+        <h2>Code List</h2>
+        <ul>
+          {this.props.codes.map(code =>
+            <Code {...code}
+                  key={code.id}
+                  onClick={() => this.props.onCodeClick(code.id)} />
+          )}
+        </ul>
+      </section>
     )
   }
 }
