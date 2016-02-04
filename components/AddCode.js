@@ -19,12 +19,12 @@ export default class AddCode extends Component {
       <section className="code-post-form">
         <h2>Post Your Code</h2>
         <div>
-          <form onSubmit={(e) => this.handleSubmit(e)}>
+          <form className="post-area" onSubmit={(e) => this.handleSubmit(e)}>
             <textarea className="post-code" placeholder="Post your code" ref="code">
             </textarea>
             <input className="post-user-name" type="text" placeholder="Your Name" ref="userName" />
-            <div>
-              <input type="submit" className="btn btn-add" value="POST" />
+            <div className="btn-group">
+              <button type="submit" className="btn btn-post">POST</button>
             </div>
           </form>
         </div>

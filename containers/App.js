@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     const { dispatch, visibleCodes, visibilityFilter } = this.props;
     return (
-      <div>
+      <div className="wrapper">
         <AddCode
           onAddSubmit={data => dispatch(addCode(data))} />
         <CodeList
