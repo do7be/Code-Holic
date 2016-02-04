@@ -6,10 +6,13 @@ li.code-preview{
   padding: 0 5px;
 }
 
-.add-code {
+.post-code {
   width: 500px;
   height: 200px;
   resize: vertical;
+}
+.post-user-name {
+  display: block;
 }
 
 .code {
@@ -22,4 +25,7 @@ li.code-preview{
   word-wrap: normal;
   background-color: transparent;
   border: 0;
+}
+.user-name {
+  text-align: right;
 }

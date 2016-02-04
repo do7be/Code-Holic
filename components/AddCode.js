@@ -18,7 +18,7 @@ export default class AddCode extends Component {
     return (
       <div>
         <form onSubmit={(e) => this.handleSubmit(e)}>
-          <textarea className="add-code" placeholder="Post your code" ref="code">
+          <textarea className="post-code" placeholder="Post your code" ref="code">
           </textarea>
           <input className="post-user-name" type="text" placeholder="Your Name" ref="userName" />
           <div>
