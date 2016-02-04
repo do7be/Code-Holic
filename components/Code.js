@@ -3,26 +3,23 @@ import React, { Component, PropTypes } from 'react'
 export default class Code extends Component {
   render() {
     return (
-      <li className="code-preview"
-        onClick={this.props.onClick}
-        style={{
-          textDecoration: this.props.deleted ? 'line-through' : 'none',
-          cursor: this.props.deleted ? 'default' : 'pointer'
-        }}>
+      <li className="code-preview">
         <pre className="code-area">
           <code className="code">
             {this.props.code}
           </code>
         </pre>
         <div>
-          <button className="btn" onClick={this.props.minus}>-</button>
-          <button className="btn" onClick={this.props.plus}>+</button>
+          <button className="btn" onClick={this.props.onClickMinus}>-</button>
+          <button className="btn" onClick={this.props.onClickPlus}>+</button>
           <div className="user-name">
             <span>
               by {this.props.name}
             </span>
           </div>
         </div>
+        <span>{this.props.dislike}</span>
+        <span>{this.props.like}</span>
       </li>
     );
   }
@@ -32,5 +29,7 @@ Code.propTypes = {
   onClick: PropTypes.func.isRequired,
   code: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  deleted: PropTypes.bool.isRequired
+  deleted: PropTypes.bool.isRequired,
+  dislike: PropTypes.number.isRequired,
+  like: PropTypes.number.isRequired,
 };

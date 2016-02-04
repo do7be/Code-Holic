@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { ActionCreators } from 'redux-undo';
-import { addCode, deleteCode, setVisibilityFilter, VisibilityFilters } from '../actions';
+import { addCode, deleteCode, dislikeCode, likeCode, setVisibilityFilter, VisibilityFilters } from '../actions';
 import AddCode from '../components/AddCode';
 import CodeList from '../components/CodeList';
 import Footer from '../components/Footer';
@@ -16,7 +16,9 @@ class App extends Component {
           onAddSubmit={data => dispatch(addCode(data))} />
         <CodeList
           codes={visibleCodes}
-          onCodeClick={id => dispatch(deleteCode(id))} />
+          onCodeClick={id => dispatch(deleteCode(id))}
+          onClickMinus={id => dispatch(dislikeCode(id))}
+          onClickPlus={id => dispatch(likeCode(id))} />
         <Footer
           filter={visibilityFilter}
           onFilterChange={nextFilter => dispatch(setVisibilityFilter(nextFilter))}
@@ -34,7 +36,9 @@ App.propTypes = {
   visibleCodes: PropTypes.arrayOf(PropTypes.shape({
     code: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    deleted: PropTypes.bool.isRequired
+    deleted: PropTypes.bool.isRequired,
+    dislike: PropTypes.number.isRequired,
+    like: PropTypes.number.isRequired,
   }).isRequired).isRequired,
   visibilityFilter: PropTypes.oneOf([
     'SHOW_ALL',

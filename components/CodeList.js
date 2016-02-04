@@ -10,7 +10,9 @@ export default class CodeList extends Component {
           {this.props.codes.map(code =>
             <Code {...code}
                   key={code.id}
-                  onClick={() => this.props.onCodeClick(code.id)} />
+                  onClick={() => this.props.onCodeClick(code.id)}
+                  onClickMinus={() => this.props.onClickMinus(code.id)}
+                  onClickPlus={() => this.props.onClickPlus(code.id)} />
           )}
         </ul>
       </section>
@@ -20,9 +22,13 @@ export default class CodeList extends Component {
 
 CodeList.propTypes = {
   onCodeClick: PropTypes.func.isRequired,
+  onClickMinus: PropTypes.func.isRequired,
+  onClickPlus: PropTypes.func.isRequired,
   codes: PropTypes.arrayOf(PropTypes.shape({
     code: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    deleted: PropTypes.bool.isRequired
+    deleted: PropTypes.bool.isRequired,
+    dislike: PropTypes.number.isRequired,
+    like: PropTypes.number.isRequired,
   }).isRequired).isRequired
 }

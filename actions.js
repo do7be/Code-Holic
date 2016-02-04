@@ -1,5 +1,7 @@
 export const ADD_CODE = 'ADD_CODE';
 export const DELETE_CODE = 'DELETE_CODE';
+export const DISLIKE_CODE = 'DISLIKE_CODE';
+export const LIKE_CODE = 'LIKE_CODE';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 
 export const VisibilityFilters = {
@@ -21,6 +23,14 @@ export function addCode(data) {
 
 export function deleteCode(id) {
   return { type: DELETE_CODE, id };
+};
+
+export function dislikeCode(id) {
+  return { type: DISLIKE_CODE, id };
+};
+
+export function likeCode(id) {
+  return { type: LIKE_CODE, id };
 };
 
 export function setVisibilityFilter(filter) {
