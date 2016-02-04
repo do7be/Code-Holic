@@ -16,9 +16,11 @@ function visibilityFilter(state = SHOW_ALL, action) {
 function code(state, action) {
   switch (action.type) {
     case ADD_CODE:
+      console.log(action);
       return {
         id: action.id,
-        text: action.text,
+        code: action.code,
+        name: action.name,
         deleted: false
       };
     case DELETE_CODE:

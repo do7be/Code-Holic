@@ -3,20 +3,28 @@ import React, { Component, PropTypes } from 'react'
 export default class Code extends Component {
   render() {
     return (
-      <li
+      <li className="code-preview"
         onClick={this.props.onClick}
         style={{
           textDecoration: this.props.deleted ? 'line-through' : 'none',
           cursor: this.props.deleted ? 'default' : 'pointer'
         }}>
-        {this.props.text}
+        <pre>
+          <code className="code">
+            {this.props.code}
+          </code>
+        </pre>
+        <p className="user-name">
+          {this.props.name}
+        </p>
       </li>
-    )
+    );
   }
-}
+};
 
 Code.propTypes = {
   onClick: PropTypes.func.isRequired,
-  text: PropTypes.string.isRequired,
+  code: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   deleted: PropTypes.bool.isRequired
-}
+};

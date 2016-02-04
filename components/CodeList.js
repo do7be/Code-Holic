@@ -18,7 +18,8 @@ export default class CodeList extends Component {
 CodeList.propTypes = {
   onCodeClick: PropTypes.func.isRequired,
   codes: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
+    code: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     deleted: PropTypes.bool.isRequired
   }).isRequired).isRequired
 }

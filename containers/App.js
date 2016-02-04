@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <AddCode
-          onAddSubmit={text => dispatch(addCode(text))} />
+          onAddSubmit={data => dispatch(addCode(data))} />
         <CodeList
           codes={visibleCodes}
           onCodeClick={id => dispatch(deleteCode(id))} />
@@ -31,7 +31,8 @@ class App extends Component {
 App.propTypes = {
   dispatch: PropTypes.func.isRequired,
   visibleCodes: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
+    code: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     deleted: PropTypes.bool.isRequired
   }).isRequired).isRequired,
   visibilityFilter: PropTypes.oneOf([

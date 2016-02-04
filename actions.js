@@ -10,11 +10,12 @@ export const VisibilityFilters = {
 
 let nextCodeId = 0;
 
-export function addCode(text) {
+export function addCode(data) {
   return {
     id: nextCodeId++,
     type: ADD_CODE,
-    text
+    code: data.code,
+    name: data.name
   };
 };
 
