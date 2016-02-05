@@ -103,6 +103,25 @@ input[type="text"], textarea {
   user-select: none;
   -webkit-appearance: none;
 }
+.btn:hover, .btn:active {
+  text-decoration: none;
+  background-color: #ddd;
+  background-image: -webkit-linear-gradient(#eee, #ddd);
+  background-image: linear-gradient(#eee, #ddd);
+  border-color: #ccc;
+}
+.btn:active {
+  background-color: #dcdcdc;
+  background-image: none;
+  border-color: #b5b5b5;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+}
+.btn:focus {
+  text-decoration: none;
+  border-color: #51a7e8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(81,167,232,0.5);
+}
 .btn-post {
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
@@ -111,6 +130,21 @@ input[type="text"], textarea {
   background-image: linear-gradient(#8add6d, #60b044);
   border-color: #5ca941;
 }
+.btn-post:hover {
+  color: #fff;
+  background-color: #569e3d;
+  background-image: -webkit-linear-gradient(#79d858, #569e3d);
+  background-image: linear-gradient(#79d858, #569e3d);
+  border-color: #4a993e;
+}
+.btn-post:active {
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  background-color: #569e3d;
+  background-image: none;
+  border-color: #418737;
+}
+
+
 
 /*
  * Code List

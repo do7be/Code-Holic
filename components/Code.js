@@ -10,16 +10,17 @@ export default class Code extends Component {
           </code>
         </pre>
         <div>
-          <button className="btn" onClick={this.props.onClickMinus}>-</button>
           <button className="btn" onClick={this.props.onClickPlus}>+</button>
+          <button className="btn" onClick={this.props.onClickMinus}>-</button>
           <div className="user-name">
             <span>
               by {this.props.name}
             </span>
           </div>
         </div>
-        <span>{this.props.dislike}</span>
-        <span>{this.props.like}</span>
+        <span>↑{this.props.like}</span>
+        ：
+        <span>↓{this.props.dislike}</span>
       </li>
     );
   }
